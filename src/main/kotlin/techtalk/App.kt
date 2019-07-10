@@ -285,6 +285,21 @@ fun `is this ruby or kotlin?`() {
     }
 
     // ^ i showed you this, please dont abuse it
+
+
+    // but is useful for functional immutable data flows
+
+    with(Person("tom", "jones")) {
+        apply {
+            firstName.toUpperCase()
+        }
+
+        run {
+            print(this)
+        }
+    }
+
+    // ^ with/apply/run (and friends) are all part of the kotlin standard library
 }
 
 
