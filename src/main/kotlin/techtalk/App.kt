@@ -289,13 +289,13 @@ fun `is this ruby or kotlin?`() {
 
     // but is useful for functional immutable data flows
 
-    with(Person("tom", "jones")) {
-        apply {
-            firstName.toUpperCase()
-        }
+    val person = Person("tom", "jones") // <-- imagine this came from a database
 
-        run {
-            print(this)
+    person.run {
+        let {
+            firstName.toUpperCase()
+        }.apply {
+            print(length)
         }
     }
 
