@@ -6,6 +6,9 @@ import kotlin.math.roundToInt
 
 
 
+
+
+
 ////////////////////////
 //  THE BASICS
 ///////////////////////
@@ -24,7 +27,7 @@ val immutableString: String = "What ${anInteger}";
 // this is how you declare a function
 fun simples(): Int {
     // useful for tests!
-    var `cash dollars`: Int = 1_000_000;
+    var `cash dollars`= 1_000_000;
 
     // control flow statements
     var taxed = if (`cash dollars` > 5_000_000) {
@@ -42,7 +45,7 @@ fun simples(): Int {
         else -> print("happy?")
     }
 
-    // inline functions (access to outer scope)
+    // inner functions (access to outer scope)
     fun embiggen(t: Int): Int {
         return `cash dollars` * t
     }

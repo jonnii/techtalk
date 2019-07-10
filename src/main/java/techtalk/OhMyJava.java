@@ -19,4 +19,10 @@ public class OhMyJava {
 
         MagicBean extraFancyBean = bean.copy(bean.getKind(), new BigDecimal(600));
     }
+
+    public class AmazingJavaClass {
+        public String getName(){
+            return "Ok";
+        }
+    }
 }
