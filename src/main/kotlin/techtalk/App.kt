@@ -210,6 +210,26 @@ fun typeInference() {
 
 
 ////////////////////////
+//  Collections
+///////////////////////
+
+
+
+fun getFunctional(): List<String> {
+    val strings = listOf("foo", "bar", "zomg")
+    return strings
+            .filter { it.length == 3 }
+            .sortedBy { it }
+            .map { it.toUpperCase() }
+}
+
+
+// there's a ton here too! If you come from C# or python you'll
+// feel right at home
+
+
+
+////////////////////////
 //  Lambdas & Higher order functions
 ///////////////////////
 
@@ -269,37 +289,52 @@ fun `is this ruby or kotlin?`() {
 
 
 
+
 ////////////////////////
-//  Collections
+//  In Summary!
 ///////////////////////
 
+/*
+
+What's Java Got?
+
+ - checked exceptions
+ - primitive types (this always confused me)
+ - static members
+ - non private fields
+ - wildcard-types
+ - ternary operator
+
+What's Kotlin Got?
+
+ - Null Safety - Null is part of the type system
+ - Lambda Expressions
+ - Extension functions/properties
+ - Smart Casts
+ - String Interpolation/Templates
+ - Properties
+ - Primary Constructors
+ - First class delegation (makes composition easier)
+ - Type inference that works
+ - Singletons (this is questionable)
+ - Range expressions
+ - Operator overloading
+ - Companion objects
+ - Data Classes
+ - Coroutines (all supported by libraries)
+ - Separate mutable/immutable collection interfaces
+ - and more!!
 
 
-fun getFunctional(): List<String> {
-    val strings = listOf("foo", "bar", "zomg")
-    return strings
-            .filter { it.length == 3 }
-            .sortedBy { it }
-            .map { it.toUpperCase() }
-}
+tl;dr try kotlin today
 
 
-// there's a ton here too! If you come from C# or python you'll
-// feel right at home
+ */
 
 
 
 
 
-
-
-class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
-}
 
 fun main(args: Array<String>) {
-    println(App().greeting)
 }
